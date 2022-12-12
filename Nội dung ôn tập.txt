@@ -1,0 +1,86 @@
+1. Extend C++
+	Biến
+		giá trị
+			toàn cục
+			cục bộ
+				động
+				tĩnh
+		tham chiếu
+		con trỏ
+	Hàm
+		tham số
+			tham trị
+			tham chiếu
+			con trỏ
+		tham chiếu
+	Con trỏ
+		bình thường
+		mảng
+		con trỏ hàm
+
+2. OOP
+	Class
+		attribute
+			bình thường
+			tĩnh
+			hằng tĩnh
+		method
+			hàm thành viên
+			hàm bạn
+			hàm dựng
+				mặc định
+				có tham số
+				sao chép
+			hàm huỷ
+				CHỈ có 1 hàm huỷ mỗi class
+				không có tham số
+
+3. Đa năng hoá
+	Overload (nạp chồng phương thức)
+		(**) Phân biệt khác nhau của cặp giá trị (ví dụ int, int*, int&)
+	Đa năng hoá toán tử
+		Bằng hàm global => cần trở thành hàm friend
+		Bằng hàm thành viên
+
+4. Kế thừa và đa hình
+	Kiểu kế thừa
+	Hàm dựng
+		(**) Hàm dựng của lớp cha được gọi trước để khởi tạo thuộc tính kế thừa
+		Hàm dựng của lớp con được gọi sau để khởi tạo thuộc tính đặc trưng
+	Hàm huỷ
+		(**) Hàm huỷ lớp con được gọi trước để giải phóng thuộc tính đặc trưng
+		Hàm huỷ lớp cha gọi sau để giải phóng thuộc tính kế thừa
+	Đa hình
+		Không được thay đổi nguyên mẫu hàm
+		Liên kết tĩnh, biến thành hàm ảo => ưu tiên thực hiện hàm của đối tượng đó
+		Hàm dựng không nhất thiết phải ảo hoá
+		Upcast, downcast (static_cast)
+		(**) Tái định nghĩa hàm của lớp cha thì tất cả các hàm của lớp cha sẽ bị che khuất đi
+
+5. Exception
+	try
+	catch
+		nên dùng tham chiếu với kiểu dữ liệu
+		(**) nên đặt khối lệnh catch của lớp con đặt trước để khi phát sinh đối tượng lớp con thì sẽ được chặn bắt chính xác
+		kiểu dữ liệu ... nên được đặt cuối cùng
+	Cơ chế phát sinh ngoại lệ
+		ngoại lệ tự động chuyển tiếp (tự động chuyển lên hàm cha khi hàm con không có chặn bắt ngoại lệ)
+		ngoại lệ chuyển tiếp thủ công (throw)
+	Thư viện exception
+
+6. Lập trình tổng quát (template)
+	Function template
+		Truyền tường minh (truyền trực tiếp kiểu dữ liệu)
+		(**) Truyền ngầm định (tìm hàm trước, không có mới tìm nguyên mẫu hàm để phát sinh)
+	Class template
+		CHỈ được gọi tường minh
+		(**) Lưu ý truyền chồng template
+
+7. Design pattern (Singleton)
+
+8. Thư viện ngoài
+	stack
+	queue
+	deque
+	algorithm
+	vector
